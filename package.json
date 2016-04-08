@@ -14,6 +14,6 @@
   },
   "homepage": "https://github.com/fenwick67/nodebb-email-domain-filter#readme",
    "nbbpm": {
-        "compatibility": "^0.8.x"
+        "compatibility": "^0.9.x"
     }
 }
