@@ -10,7 +10,7 @@ var Plugin = {
         return next( new Error('Bad email address: you must register with a "'+emailDomain+'" email address.') );
     },
     filterEmailUpdate: function(data,next){
-        if(data && data.email){
+        if(data){
             if ( emailDomainCheck(data.email) ){
              return next(null,data);  
             }
@@ -22,7 +22,7 @@ var Plugin = {
 module.exports = Plugin;
     
 function emailDomainCheck(e){
-    if (e.toString().toLowerCase().indexOf(emailDomain) >= 0){
+    if (e == null || e.toString().toLowerCase().indexOf(emailDomain) >= 0){
         return true;
     }
     return false;
