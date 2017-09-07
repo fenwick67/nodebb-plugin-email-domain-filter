@@ -22,7 +22,7 @@ var Plugin = {
 module.exports = Plugin;
     
 function emailDomainCheck(e){
-    if (e.toString().toLowerCase().indexOf(emailDomain) >= 0){
+    if ( e.toString().toLowerCase().indexOf(emailDomain) >= 0 && e.toString().match(/\@/g).length == 1 ){
         return true;
     }
     return false;
